@@ -1,0 +1,32 @@
+/*
+ * project.h
+ *
+ *  Created on: Aug 26, 2024
+ *      Author: ahmed
+ */
+
+#ifndef PROJECT_H_
+#define PROJECT_H_
+
+/*===========================INCLUDES==================================*/
+#include<avr/io.h>
+#include<avr/interrupt.h>
+#include<util/delay.h>
+/*=====================================================================*/
+
+/*===========================EXTERNS===================================*/
+extern unsigned char a=0,b=0,c=0,d=0,i=0,k=0;
+/*=====================================================================*/
+
+/*===========================FUNCTIONS DECLARATIONS====================*/
+void ext_interrupt0_init(void);
+void ext_interrupt1_init(void);
+void ext_interrupt2_init(void);
+void pins_init(void);
+ISR(INT0_vect);
+ISR(INT1_vect);
+ISR(INT2_vect);
+/*=====================================================================*/
+
+
+#endif /* PROJECT_H_ */
